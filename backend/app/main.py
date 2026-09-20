@@ -28,6 +28,10 @@ app.include_router(issues_router)
 app.include_router(alerts_router)
 app.include_router(workflow_router)
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to ConstructFlow API"}
+
 @app.get("/api/health")
 def health_check():
     return {"status": "ok", "db": "ok"} # For now, simple health check
