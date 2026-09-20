@@ -12,3 +12,4 @@ python-multipart
 pytest
 google-genai
 openai
+email-validator
